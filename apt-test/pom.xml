@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>tech.jhipster</groupId>
+    <artifactId>jhipster-dependencies</artifactId>
+    <version>7.1.1-SNAPSHOT</version>
+    <relativePath>../jhipster-dependencies/pom.xml</relativePath>
+  </parent>
+  <artifactId>apt-test</artifactId>
+  <name>apt-test</name>
+  <description>Test for the APT </description>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+          <generatedSourcesDirectory>${project.build.directory}/generated-sources/</generatedSourcesDirectory>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>tech.jhipster</groupId>
+              <artifactId>jhipster-apt</artifactId>
+              <version>${jhipster-framework.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>tech.jhipster</groupId>
+      <artifactId>jhipster-annotations</artifactId>
+      <version>${jhipster-framework.version}</version>
+    </dependency>
+  </dependencies>
+</project>

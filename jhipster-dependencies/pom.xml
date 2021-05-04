@@ -39,6 +39,7 @@
 
     <properties>
         <!-- Dependency versions -->
+        <auto-service.version>1.0</auto-service.version>
         <aws-java-sdk-bom.version>1.12.12</aws-java-sdk-bom.version>
         <azure-spring-cloud-client.version>2.4.0</azure-spring-cloud-client.version>
         <azure-applicationinsights-spring-boot-starter.version>2.6.3</azure-applicationinsights-spring-boot-starter.version>
@@ -51,6 +52,7 @@
         <hazelcast.version>4.1.1</hazelcast.version>
         <hazelcast-hibernate5.version>2.2.0</hazelcast-hibernate5.version>
         <infinispan.version>12.1.4.Final</infinispan.version>
+        <javapoet.version>1.13.0</javapoet.version>
         <jjwt.version>0.11.2</jjwt.version>
         <logstash-logback-encoder.version>6.6</logstash-logback-encoder.version>
         <lz4-java.version>1.8.0</lz4-java.version>
@@ -81,6 +83,16 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>tech.jhipster</groupId>
+                <artifactId>jhipster-annotations</artifactId>
+                <version>${jhipster-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.jhipster</groupId>
+                <artifactId>jhipster-apt</artifactId>
+                <version>${jhipster-framework.version}</version>
+            </dependency>
             <dependency>
                 <groupId>tech.jhipster</groupId>
                 <artifactId>jhipster-framework</artifactId>

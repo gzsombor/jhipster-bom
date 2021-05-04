@@ -79,6 +79,9 @@
     <modules>
         <module>jhipster-dependencies</module>
         <module>jhipster-framework</module>
+        <module>jhipster-annotations</module>
+        <module>jhipster-apt</module>
+        <module>apt-test</module>
     </modules>
 
     <profiles>
